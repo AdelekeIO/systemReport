@@ -70,9 +70,8 @@ async function action({ deviceIds }, cb) {
           let data_resp = res.data.Items;
           var InverterData = data_resp.map(res => {
             return {
-              InverterData: res.payload.InverterData
-                ? res.payload.InverterData
-                : []
+              InverterData: res.payload.InverterData,
+              Timestamp: res.payload.Timestamp
             };
           });
 
@@ -90,9 +89,8 @@ async function action({ deviceIds }, cb) {
                 let data_resp = res.data.Items;
                 var InverterData2 = data_resp.map(res => {
                   return {
-                    InverterData: res.payload.InverterData
-                      ? res.payload.InverterData
-                      : []
+                    InverterData: res.payload.InverterData,
+                    Timestamp: res.payload.Timestamp
                   };
                 });
 
